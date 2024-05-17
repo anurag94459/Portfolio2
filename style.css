@@ -36,7 +36,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 2%;
     padding-left: 2.5%;
     padding-right: 2.5%;
 }
@@ -53,14 +53,15 @@ header {
 }
 
 .navbar .links li a:hover{
-    font-size: 1.35rem;
-    transition: transform 0.2s ease;
+    font-size: 1.25rem;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
 }
 
 .navbar .links li a:active{
     font-size: 1.4rem;
     font-weight: bold;
-    /* text-decoration: underline; */
+    text-decoration: underline;
 }
 
 .navbar .links {
@@ -149,4 +150,33 @@ header {
         left: 2rem;
         width: unset;
     }
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 10rem 2% 2rem;
+}
+
+.circle {
+    width: 450px; 
+    height: 700px;
+    border-radius: 50%;
+    border: 4px solid red;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content{
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 10% 10%;
+    justify-content: space-evenly;
 }
