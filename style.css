@@ -36,7 +36,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2%;
+    padding-top: 1%;
     padding-left: 2.5%;
     padding-right: 2.5%;
 }
@@ -155,18 +155,8 @@ header {
 
 section{
     min-height: 100vh;
-    padding: 10rem 2% 2rem;
+    padding: 1rem 2% 2rem;
 }
-
-.circle {
-    width: 450px; 
-    height: 700px;
-    border-radius: 50%;
-    border: 4px solid red;
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
-    background-color: transparent;
-}
-
 
 .home{
     display: flex;
@@ -174,9 +164,82 @@ section{
     align-items: center;
 }
 
+.home-img img{
+    width: 28vw;
+    border-radius: 50%;
+    box-shadow: 0 0 160px 55px rgba(0, 0, 0, 0.75);
+}
+
 .home-content{
     font-size: 2.5rem;
     color: #fff;
     margin: 10% 10%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-block-start: 23%;
+}
+
+p{
+    font-size: 1.75rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.name{
+    font-size: medium;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+span{
+    font-size: 5.5em;
+    font-weight: 600;
+}
+
+.last-name{
+    color: #f00;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin: 2rem 1rem 1rem 0;
+    transition: .25s ease;
+}
+
+.social-media a:hover{
+    transform: scale(1.05);
+    color: #ff0000;
+    text-decoration: solid;
+    border: 2px solid #f00;
+    box-shadow: 0 0 1rem #ff0000;
+}
+
+.btn{
+    display: inline-block;
+    margin: 1.2rem 0.5rem;
+    padding: 1rem 2rem;
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    border-radius: 4rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.35s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+    color: #ff0000;
+    background: none;
+    box-shadow: 0 0 1rem #ff0000;
+    
 }
