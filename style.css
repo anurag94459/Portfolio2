@@ -226,7 +226,7 @@ span{
 .btn{
     display: inline-block;
     margin: 1.2rem 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background: #ff0000;
     border: 2px solid #ff0000;
     border-radius: 4rem;
@@ -242,4 +242,48 @@ span{
     background: none;
     box-shadow: 0 0 1rem #ff0000;
     
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    /* background: #ff0000; */
+}
+
+.about-img img{
+    width: 20vw;
+}
+
+.about-content{
+    color: #fff;
+}
+
+.heading{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.headingid{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4.5rem;
+}
+
+.heading span{
+    color: #ff0000;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2.0rem;
 }
