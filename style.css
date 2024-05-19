@@ -1,216 +1,140 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
 }
 
-body {
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #000, #333);
+    height: 100vh;
+    /* background: linear-gradient(to right, #000, #333); */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0) 50%, #525252);
     background-size: cover;
 }
 
-li {
-    list-style: none;
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-}
-
-a:hover {
-    color: #ff0000;
-}
-
-header {
-    position: relative;
-    padding: 0 2rem;
-}
-
-.navbar {
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: none;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    z-index: 100;
     padding-top: 1%;
     padding-left: 2.5%;
     padding-right: 2.5%;
 }
 
-.navbar .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
+.logo{
+    font-size: 2.5rem;
     color: #ff0000;
-    margin-left: 20px;
+    font-weight: 700;
+    cursor: default;
 }
 
-.navbar .links li a{
-    font-size: 1.25rem;
+.navbar a{
+    font-size: 1.7rem;
+    color: aliceblue;
+    margin-left: 4rem;
 }
 
-.navbar .links li a:hover{
-    font-size: 1.25rem;
-    transform: scale(1.05);
-    transition: all 0.5s ease;
+.navbar a:hover {
+    color: #ff0000;
+    transform: scale(1.25);
+    transition: transform 0.5s ease;
 }
 
-.navbar .links li a:active{
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: underline;
+.navbar a.active{
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 2.0rem;
+    transition: 0.5s ease;
 }
 
-.navbar .links {
-    display: flex;
-    gap: 2.5rem;
-}
-
-.navbar .toggle_btn {
-    color: #f00;
-    font-size: 1.5rem;
-    cursor: pointer;
+#menu-icon {
+    font-size: 3.6rem;
+    color: #ff0000;
     display: none;
-}
 
-.action_btn {
-    background-color: #ff0000;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.action_btn:hover {
-    transform: scale(1.05);
-    color: #fff;
-    text-decoration: solid;
-}
-
-.action_btn:active {
-    transform: scale(1.2);
-}
-
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown_menu.open {
-    height: 240px;
-}
-
-.dropdown_menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown_menu .action_btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 992px) {
-    .navbar .links,
-    .action_btn {
-        display: none;
-    }
-
-    .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-    }
-}
-
-@media (max-width: 576px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-}
-
-
-section{
-    min-height: 100vh;
-    padding: 1rem 2% 2rem;
 }
 
 .home{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    /* padding: 0 5%; */
 }
 
 .home-img img{
-    width: 28vw;
+    width: 25vw;
     border-radius: 50%;
-    box-shadow: 0 0 160px 55px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 8px 50px rgba(211, 211, 211, 0.75);
 }
 
-.home-content{
+.home-content {
+    padding-top: 25%;
     font-size: 2.5rem;
+    font-weight: 600;
     color: #fff;
-    margin: 10% 10%;
-    justify-content: space-between;
-    margin-block-start: 23%;
+    align-items: last baseline;
 }
 
-p{
-    font-size: 1.75rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-
-.name{
-    font-size: medium;
+.greetings {
+    font-size: 2.6rem;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
 }
 
 span{
-    font-size: 5.5em;
-    font-weight: 600;
+    font-size: 10.5rem;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
-.last-name{
-    color: #f00;
+span .highlight{
+    color: #ff0000;
+}
+
+.description {
+    font-size: 2.6rem;
+    color: #ccc;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .social-media a{
+    color: #fff;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     background: transparent;
-    border: .2rem solid #fff;
+    border: .1rem solid #fff;
     border-radius: 50%;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 2rem 1rem 1rem 0;
     transition: .25s ease;
 }
@@ -226,64 +150,22 @@ span{
 .btn{
     display: inline-block;
     margin: 1.2rem 0.5rem;
-    padding: 0.8rem 2rem;
+    padding:  0.8rem 4rem;
     background: #ff0000;
     border: 2px solid #ff0000;
     border-radius: 4rem;
-    font-size: 1.25rem;
+    font-size: 2.0rem;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
+    font-style: normal;
     color: #fff;
     transition: 0.35s ease;
 }
 
 .btn:hover{
     box-shadow: none;
-    color: #ff0000;
+    color: none;
     background: none;
     box-shadow: 0 0 1rem #ff0000;
     
-}
-
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-    /* background: #ff0000; */
-}
-
-.about-img img{
-    width: 20vw;
-}
-
-.about-content{
-    color: #fff;
-}
-
-.heading{
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 4.5rem;
-    text-align: center;
-}
-
-.headingid{
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 4.5rem;
-}
-
-.heading span{
-    color: #ff0000;
-}
-
-.about-content h2{
-    text-align: left;
-    line-height: 1.2;
-}
-
-.about-content h3{
-    font-size: 2.0rem;
 }
