@@ -1,18 +1,39 @@
-const portfolioContainer = document.querySelector('.portfolio-container');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+ // toggle icon/
+ let menuIcon = document.querySelector('#menu-icon');
+ let navbar = document.querySelector('.navbar');
 
-let index = 0;
+ menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+ };
 
-function showSlide(i) {
-    index += i;
-    if (index >= portfolioContainer.children.length) {
-        index = 0;
-    } else if (index < 0) {
-        index = portfolioContainer.children.length - 1;
-    }
-    portfolioContainer.style.transform = `translateX(${-index * 100}%)`;
-}
+// scroll section/
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-prevButton.addEventListener('click', () => showSlide(-1));
-nextButton.addEventListener('click', () => showSlide(1));
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop-150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset & top < offset + height){
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+
+            });
+        };
+    });
+
+    // sticky navbar/
+    let header = document.querySelector('header');
+
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    //remove toggle icona and navbar when clicked
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
+
