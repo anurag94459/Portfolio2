@@ -403,6 +403,7 @@ span{
     width: 50px;
 }
 
+
 .services{
     background: var(--bg-color);
     color: black
@@ -503,8 +504,8 @@ span{
 .project-item{
     min-height: 550px;
     max-height: 450px;
-    background: var(--main-color);
-    border: 3px solid rgba(238, 238, 238, 0.2);
+    /* background: var(--main-color); */
+    border: 3px solid var(--main-color);
     border-radius: 2rem;
     margin: 0 2rem;
     padding: 30px 60px;
