@@ -442,7 +442,7 @@ span{
 .service-box .service-info{
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     max-height: 200px;
     justify-content: left;
     align-items: baseline;
@@ -453,6 +453,7 @@ span{
     font-size: 3rem;
     font-weight: 800;
     line-height: 2;
+    align-self: center;
 }
 
 .service-info p{
@@ -461,6 +462,12 @@ span{
     max-height: 100px;
     line-height: 1.7;
     margin: auto;
+}
+
+.service-info i{
+    font-size: 5.5rem;
+    color: rgb(255, 0, 0);
+    align-self: center;
 }
 
 .projects{
@@ -572,8 +579,9 @@ span{
     position: relative;
     bottom: 0;
     width: 100%;
-    padding: 40px 0;
+    padding: 20px 0;
     background-color: var(--bg-color);
+    border-top: 2px solid #fffafa;
 }
 
 .footer .social{
@@ -628,7 +636,7 @@ span{
 }
 
 .footer .copyright{
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     font-size: 16px;
     color: white;
