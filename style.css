@@ -386,7 +386,7 @@ span{
 
 .timeline-content p{
     color: white;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 22px;
 }
@@ -459,8 +459,8 @@ span{
 }
 
 .service-info p{
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
     max-height: 100px;
     line-height: 1.7;
     margin: auto;
@@ -532,7 +532,7 @@ span{
 }
 
 .project-item p{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 
@@ -738,5 +738,118 @@ span{
     .services-container{
         grid-template-columns: repeat(1,1fr);
         
+    }
+}
+@media(max-width:450px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 80%;
+        padding: 1rem 2%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.5rem;
+        margin: 2rem 0;
+        color: white;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 3rem 2rem;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+    .home-content p{
+        max-width: 90%;
+        margin: 0 10%;
+        font-size: 1rem;
+    }
+    .home-img img{
+        width: 80vw;
+    }
+    .services h2{
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:425px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 85%;
+        padding: 1rem 2%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.4rem;
+        margin: 1.5rem 0;
+        color: white;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 3rem 2rem;
+    }
+    .home-content h3{
+        font-size: 1.8rem;
+    }
+    .home-content h1{
+        font-size: 4.5rem;
+        margin-top: 1.5rem;
+    }
+    .home-content p{
+        max-width: 85%;
+        margin: 0 2%;
+        font-size: 1.0rem;
+    }
+    .home-img img{
+        width: 85vw;
+    }
+    .services h2{
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+    }
+    .services-container{
+        grid-template-columns: 1fr;
+        font-size: 1.5rem;
+    }
+    .services p {
+        font-size: 1.2rem;   
+        line-height: 1.0; 
+        word-wrap: break-word;  
     }
 }
