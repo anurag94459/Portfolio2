@@ -1,0 +1,79 @@
+/* 404.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.text h1 {
+    font-size: 3em;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+.text p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px 0;
+        min-width: 200px;
+    }
+
+    .text, .image {
+        width: 100%;
+    }
+
+    .text {
+        display: block;
+        width: 100%;
+        padding: 20px 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px 20px;
+        min-width: 150px;
+        align-items: center;
+    }
+
+    .text {
+        padding: 10px 20px;
+    }
+
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+}
