@@ -490,10 +490,11 @@ span{
 }
 
 .projects-box img{
-    width: 15rem;
-    border-radius: 50%;
-    border: 3px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
+    width: 60%;  
+    height: auto; 
+    border: none;  
+    border-radius: 0; 
+    box-shadow: none;  
 }
 
 .wrapper{
@@ -513,9 +514,9 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     text-align: center;
-    gap: 2.5rem;
+    gap: 3.5rem;
     color: white;
     transition: 0.4s ease-in-out;
 }
