@@ -1,25 +1,54 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+document.addEventListener('DOMContentLoaded', () => {
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('header nav a');
+    let isScrolling = false;
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    const activateLink = (link) => {
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        link.classList.add('active');
+    };
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+    window.onscroll = () => {
+        if (isScrolling) return;  
+
+        let scrollPosition = window.scrollY + 150;
+
+        sections.forEach(section => {
+            let sectionTop = section.offsetTop;
+            let sectionHeight = section.offsetHeight;
+            let sectionId = section.getAttribute('id');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href').includes(sectionId)) {
+                        activateLink(link);
+                    }
+                });
+            }
+        });
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();   
+
+            let targetSection = document.querySelector(link.getAttribute('href'));
+            isScrolling = true;
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
             });
-        }
-    });
-};
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+            setTimeout(() => {
+                activateLink(link);
+                isScrolling = false;  
+            }, 50); 
+        });
+    });
+
+    menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    };
+});

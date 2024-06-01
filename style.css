@@ -65,8 +65,9 @@ body{
     border-bottom: 3px solid transparent;
 }
 
+.navbar a.active,
 .navbar a:hover,
-.navbar a active{
+.navbar a:focus {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
