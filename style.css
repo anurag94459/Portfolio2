@@ -32,7 +32,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 2% 4rem;
+    padding: 2rem 2% 2rem;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -413,18 +413,17 @@ span{
 
 
 .services{
-    background: var(--bg-color);
-    color: black
+    background: var(--bg-color);  
 }
 
-.services h2{
+.services h1{
     margin-bottom: 5rem;
     color: white;
 }
 
 .services-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     align-items: center;
     gap: 2.5rem;
     color: black;
@@ -466,7 +465,7 @@ span{
 }
 
 .service-info p{
-    font-size: 1.5rem;
+    font-size:  1.5rem;
     font-weight: 500;
     max-height: 100px;
     line-height: 1.7;
@@ -491,6 +490,14 @@ span{
     justify-content: center;
     flex-direction: column;
 }
+.projects-box1{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 
 .projects .heading{
     margin-bottom: 5rem;
@@ -499,6 +506,14 @@ span{
 .projects-box img{
     width: 60%;  
     height: auto; 
+    border: none;  
+    border-radius: 0; 
+    box-shadow: none;  
+}
+
+.projects-box1 img{
+    height: auto; 
+    width: 120%;
     border: none;  
     border-radius: 0; 
     box-shadow: none;  
@@ -540,6 +555,7 @@ span{
 
 .project-item p{
     font-size: 1.4rem;
+    text-align: left;
 }
 
 
